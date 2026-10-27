@@ -1,0 +1,9 @@
+backend:
+  name: github
+  repo: Teamtrusthelpingsmile/trust-helping-smile
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections: []
