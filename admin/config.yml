@@ -1,9 +1,19 @@
 backend:
-  name: github
-  repo: Teamtrusthelpingsmile/trust-helping-smile
-  branch: main
+name: github
+repo: Teamtrusthelpingsmile/trust-helping-smile
+branch: main
 
 media_folder: "assets"
 public_folder: "/assets"
 
-collections: []
+collections:
+
+- name: "pages"
+  label: "Website Pages"
+  files:
+  - name: "about"
+    label: "About Us"
+    file: "content/about.json"
+    fields:
+    - { label: "Trust Name", name: "title", widget: "string" }
+    - { label: "About Trust", name: "body", widget: "text" }
