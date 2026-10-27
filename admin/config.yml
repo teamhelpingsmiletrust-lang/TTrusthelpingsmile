@@ -1,19 +1,24 @@
 backend:
-name: github
-repo: Teamtrusthelpingsmile/trust-helping-smile
-branch: main
+  name: github
+  repo: Teamtrusthelpingsmile/trust-helping-smile
+  branch: main
+
+site_url: https://helpingsmiletrust.netlify.app
 
 media_folder: "assets"
 public_folder: "/assets"
 
 collections:
-
-- name: "pages"
-  label: "Website Pages"
-  files:
-  - name: "about"
-    label: "About Us"
-    file: "content/about.json"
-    fields:
-    - { label: "Trust Name", name: "title", widget: "string" }
-    - { label: "About Trust", name: "body", widget: "text" }
+  - name: "pages"
+    label: "Website Pages"
+    files:
+      - name: "about"
+        label: "About Us"
+        file: "content/about.json"
+        fields:
+          - label: "Trust Name"
+            name: "title"
+            widget: "string"
+          - label: "About Trust"
+            name: "body"
+            widget: "text"
