@@ -9,16 +9,77 @@ media_folder: "assets"
 public_folder: "/assets"
 
 collections:
-  - name: "pages"
-    label: "Website Pages"
+  - name: "settings"
+    label: "Website Settings"
     files:
-      - name: "about"
-        label: "About Us"
-        file: "content/about.json"
+      - name: "contact"
+        label: "Contact Details"
+        file: "content/site.json"
         fields:
           - label: "Trust Name"
-            name: "title"
+            name: "trust_name"
             widget: "string"
-          - label: "About Trust"
-            name: "body"
+          - label: "Phone Number"
+            name: "phone"
+            widget: "string"
+            required: false
+          - label: "WhatsApp Number"
+            name: "whatsapp"
+            widget: "string"
+            required: false
+          - label: "Email"
+            name: "email"
+            widget: "string"
+            required: false
+          - label: "Address"
+            name: "address"
             widget: "text"
+            required: false
+          - label: "About Trust"
+            name: "about"
+            widget: "text"
+          - label: "Facebook Link"
+            name: "facebook"
+            widget: "string"
+            required: false
+          - label: "Instagram Link"
+            name: "instagram"
+            widget: "string"
+            required: false
+          - label: "YouTube Link"
+            name: "youtube"
+            widget: "string"
+            required: false
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Project Name"
+                name: "name"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+          - label: "Team Members"
+            name: "team"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Role"
+                name: "role"
+                widget: "string"
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
