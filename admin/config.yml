@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Teamtrusthelpingsmile/trust-helping-smile
+  repo: teamhelpingsmiletrust-lang/trust-helping-smile
   branch: main
 
 site_url: https://helpingsmiletrust.netlify.app
