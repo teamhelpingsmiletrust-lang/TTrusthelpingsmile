@@ -65,3 +65,43 @@ $('#adminOpen').onclick=openAdmin;$('#adminOpen2').onclick=openAdmin;$('#adminCl
 $('#adminLoginBtn').onclick=()=>{if($('#adminPass').value==='smile-demo'){$('#adminLogin').classList.add('hidden');$('#adminContent').classList.remove('hidden');fillEditor();renderInbox()}else toast('Incorrect demo password.')};
 function fillEditor(){$('#editHeroTitle').value=siteData.heroTitle;$('#editHeroText').value=siteData.heroText;$('#editAboutTitle').value=siteData.aboutTitle;$('#editAboutText').value=siteData.aboutText;$('#editJoinTitle').value=siteData.joinTitle;$('#editJoinText').value=siteData.joinText;$('#editAddress').value=siteData.address;$('#editPhone').value=siteData.phone;$('#editEmail').value=siteData.email;$('#editProjects').value=siteData.projects.map(p=>p.join(' | ')).join('\n');$('#editGallery').value=siteData.gallery.map(g=>g.join(' | ')).join('\n')}
 $('#saveSiteBtn').onclick=()=>{const lines=s=>s.split('\n').map(x=>x.split('|').map(y=>y.trim())).filter(x=>x.some(Boolean));siteData={heroTitle:$('#editHeroTitle').value.trim()||defaults.heroTitle,heroText:$('#editHeroText').value.trim(),aboutTitle:$('#editAboutTitle').value.trim(),aboutText:$('#editAboutText').value.trim(),joinTitle:$('#editJoinTitle').value.trim(),joinText:$('#editJoinText').value.trim(),address:$('#editAddress').value.trim(),phone:$('#editPhone').value.trim(),email:$('#editEmail').value.trim(),projects:lines($('#editProjects').value).map(p=>[p[0]||'♡',p[1]||'Project',p[2]||'',p[3]||'Community']).slice(0,30),gallery:lines($('#editGallery').value).map(g=>[g[0]||'📷',g[1]||'Activity']).slice(0,20)};saveSite();renderSite();toast('Changes saved in this browser onl
+/* Load Home Page content from the Admin CMS */
+async function loadHomePageFromCMS() {
+  try {
+    const response = await fetch('/content/home.json', {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error('Home content could not be loaded');
+    }
+
+    const data = await response.json();
+
+    const heading = document.querySelector('#home h1');
+    const description = document.querySelector('#home .hero-grid > div > p');
+    const joinHeading = document.querySelector('#join h2');
+    const joinDescription = document.querySelector('#join .join p');
+
+    if (heading && data.heroTitle) {
+      heading.textContent = data.heroTitle;
+    }
+
+    if (description && data.heroText) {
+      description.textContent = data.heroText;
+    }
+
+    if (joinHeading && data.joinTitle) {
+      joinHeading.textContent = data.joinTitle;
+    }
+
+    if (joinDescription && data.joinText) {
+      joinDescription.textContent = data.joinText;
+    }
+  } catch (error) {
+    console.error('CMS content loading error:', error);
+  }
+}
+
+loadHomePageFromCMS();
+ 
