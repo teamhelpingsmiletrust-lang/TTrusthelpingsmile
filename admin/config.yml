@@ -4,82 +4,95 @@ backend:
   branch: main
 
 site_url: https://helpingsmiletrust.netlify.app
+display_url: https://helpingsmiletrust.netlify.app
 
 media_folder: "assets"
 public_folder: "/assets"
 
 collections:
-  - name: "settings"
-    label: "Website Settings"
+  - name: home
+    label: Home Page
     files:
-      - name: "contact"
-        label: "Contact Details"
-        file: "content/site.json"
+      - name: home
+        label: Home Content
+        file: content/home.json
         fields:
-          - label: "Trust Name"
-            name: "trust_name"
-            widget: "string"
-          - label: "Phone Number"
-            name: "phone"
-            widget: "string"
-            required: false
-          - label: "WhatsApp Number"
-            name: "whatsapp"
-            widget: "string"
-            required: false
-          - label: "Email"
-            name: "email"
-            widget: "string"
-            required: false
-          - label: "Address"
-            name: "address"
-            widget: "text"
-            required: false
-          - label: "About Trust"
-            name: "about"
-            widget: "text"
-          - label: "Facebook Link"
-            name: "facebook"
-            widget: "string"
-            required: false
-          - label: "Instagram Link"
-            name: "instagram"
-            widget: "string"
-            required: false
-          - label: "YouTube Link"
-            name: "youtube"
-            widget: "string"
-            required: false
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            required: false
+          - { label: Heading, name: heroTitle, widget: string }
+          - { label: Description, name: heroText, widget: text }
+          - { label: Join Heading, name: joinTitle, widget: string }
+          - { label: Join Description, name: joinText, widget: text }
+
+  - name: about
+    label: About Page
+    files:
+      - name: about
+        label: About Content
+        file: content/about.json
+        fields:
+          - { label: Heading, name: aboutTitle, widget: string }
+          - { label: Description, name: aboutText, widget: text }
+
+  - name: projects
+    label: Projects
+    files:
+      - name: projects
+        label: Manage Projects
+        file: content/projects.json
+        fields:
+          - label: Project List
+            name: projects
+            widget: list
             fields:
-              - label: "Project Name"
-                name: "name"
-                widget: "string"
-              - label: "Description"
-                name: "description"
-                widget: "text"
-          - label: "Team Members"
-            name: "team"
-            widget: "list"
-            required: false
+              - { label: Project Name, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Category, name: category, widget: string, required: false }
+              - { label: Icon, name: icon, widget: string, required: false }
+              - { label: Photo, name: image, widget: image, required: false }
+
+  - name: gallery
+    label: Gallery
+    files:
+      - name: gallery
+        label: Gallery Photos
+        file: content/gallery.json
+        fields:
+          - label: Photos
+            name: gallery
+            widget: list
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Role"
-                name: "role"
-                widget: "string"
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            required: false
+              - { label: Photo, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string }
+
+  - name: team
+    label: Team Members
+    files:
+      - name: team
+        label: Manage Team
+        file: content/team.json
+        fields:
+          - label: Members
+            name: team
+            widget: list
             fields:
-              - label: "Photo"
-                name: "image"
-                widget: "image"
-              - label: "Caption"
-                name: "caption"
-                widget: "string"
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Bio, name: bio, widget: text, required: false }
+
+  - name: settings
+    label: Website Settings
+    files:
+      - name: contact
+        label: Contact Details
+        file: content/site.json
+        fields:
+          - { label: Trust Name, name: trust_name, widget: string }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: WhatsApp, name: whatsapp, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Address, name: address, widget: text, required: false }
+          - { label: About Trust, name: about, widget: text, required: false }
+          - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: Instagram, name: instagram, widget: string, required: false }
+          - { label: YouTube, name: youtube, widget: string, required: false }
+          
