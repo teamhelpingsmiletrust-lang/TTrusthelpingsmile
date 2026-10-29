@@ -1,68 +1,554 @@
 <!DOCTYPE html>
-<html ="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Trust Helping Smile spreads happiness through kindness and social service.">
 <title>Trust Helping Smile | Spreading Happiness</title>
+
 <style>
-:root{--navy:#13233d;--pink:#e83e8c;--orange:#ff8b38;--cream:#fff9f5;--muted:#687386;--line:#e9edf3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,system-ui,sans-serif;color:var(--navy);line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}.topbar{background:var(--navy);color:white;padding:8px 0;font-size:.9rem}.header{position:sticky;top:0;z-index:5;background:#fffffff2;border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:78px}.brand{font-weight:900;letter-spacing:.04em}.brand small{display:block;color:var(--pink);font-size:.7rem}.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.btn{display:inline-block;border:0;border-radius:30px;padding:12px 18px;background:linear-gradient(120deg,var(--pink),var(--orange));color:white;font-weight:bold;cursor:pointer}.secondary{background:white;color:var(--navy);border:1px solid var(--line)}.hero{padding:68px 0;background:radial-gradient(circle at 85% 15%,#ffe1ed,transparent 30%),linear-gradient(135deg,#fff,#fff8f5)}.hero-grid,.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.eyebrow,.kicker{color:var(--pink);font-weight:800}.hero h1{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.05;margin:14px 0}.hero h1 em{color:var(--pink);font-style:normal}.muted,p{color:var(--muted)}.hero-logo{background:white;border:1px solid var(--line);padding:25px;border-radius:25px;text-align:center;font-size:5rem;box-shadow:0 15px 40px #13233d12}.section{padding:65px 0}.soft{background:var(--cream)}.section-head{text-align:center;max-width:720px;margin:0 auto 30px}.section h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15}.about-art{border-radius:24px;background:linear-gradient(130deg,#ffe4ed,#fff0dd);padding:40px;text-align:center;font-size:5rem}.values,.cards,.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.value,.card,.gallery-tile,.formbox{border:1px solid var(--line);border-radius:18px;padding:22px;background:white}.value b{color:var(--pink);font-size:1.4rem}.icon{font-size:2rem}.card h3{margin:8px 0}.project-label{color:var(--pink);font-weight:bold;font-size:.85rem}.gallery{grid-template-columns:repeat(4,1fr)}.gallery-tile{text-align:center;background:linear-gradient(145deg,#ffe4ed,#fff0dd);font-size:2rem}.gallery-tile span{display:block;font-size:.9rem;font-weight:bold}.join{background:var(--navy);color:white;padding:32px;border-radius:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.join p{color:#e0e6ef}.contact-info{background:var(--navy);color:white;border-radius:20px;padding:28px}.contact-info p{color:#e0e6ef}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-weight:bold;font-size:.9rem}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #dce2eb;border-radius:10px}.field textarea{min-height:110px}.notice{font-size:.82rem}.footer{background:#0d192d;color:white;padding:35px 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}.footer p,.footer a{color:#cbd3df}.footer-links{display:grid;gap:8px}.chat-fab{position:fixed;right:18px;bottom:18px;border:0;border-radius:50%;width:58px;height:58px;background:#20b968;color:white;font-size:1.5rem;z-index:10;cursor:pointer}.chatbox,.admin-modal{display:none;position:fixed;z-index:20;background:white;border:1px solid var(--line);box-shadow:0 15px 50px #0002}.chatbox{right:16px;bottom:88px;width:min(350px,calc(100vw - 32px));border-radius:18px;overflow:hidden}.chatbox.open{display:block}.chat-head{background:var(--navy);color:white;padding:14px;display:flex;justify-content:space-between}.chat-body{padding:16px}.chat-body input,.chat-body textarea{width:100%;padding:10px;margin-bottom:8px;border:1px solid var(--line);border-radius:9px}.admin-modal{inset:0;background:#0d192dcc;overflow:auto;padding:20px}.admin-modal.open{display:block}.admin-panel{max-width:1000px;margin:20px auto;background:white;border-radius:18px;padding:22px}.admin-panel input,.admin-panel textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin:5px 0}.admin-panel textarea{min-height:80px}.admin-panel table{border-collapse:collapse;width:100%;font-size:.88rem}.admin-panel th,.admin-panel td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.small-btn{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:white;cursor:pointer}.hidden{display:none!important}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:12px 18px;border-radius:10px;display:none;z-index:50}.toast.show{display:block}
-@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.links{gap:12px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.values{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.join{display:block}.footer-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
-@media(max-width:440px){.cards,.values{grid-template-columns:1fr}.section{padding:48px 0}}
+:root {
+  --navy:#13233d;
+  --pink:#e83e8c;
+  --orange:#ff8b38;
+  --cream:#fff9f5;
+  --muted:#687386;
+  --line:#e9edf3;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial,system-ui,sans-serif;
+  color:var(--navy);
+  line-height:1.6;
+}
+a { color:inherit; text-decoration:none; }
+button,input,textarea,select { font:inherit; }
+.wrap { width:min(1120px,92%); margin:auto; }
+.topbar {
+  background:var(--navy);
+  color:white;
+  padding:8px 0;
+  font-size:.9rem;
+}
+.header {
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#fffffff2;
+  border-bottom:1px solid var(--line);
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  min-height:78px;
+  padding:12px 0;
+}
+.brand { font-weight:900; letter-spacing:.04em; }
+.brand small {
+  display:block;
+  color:var(--pink);
+  font-size:.7rem;
+}
+.links {
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.btn {
+  display:inline-block;
+  border:0;
+  border-radius:30px;
+  padding:12px 18px;
+  background:linear-gradient(120deg,var(--pink),var(--orange));
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+.secondary {
+  background:white;
+  color:var(--navy);
+  border:1px solid var(--line);
+}
+.hero {
+  padding:68px 0;
+  background:
+    radial-gradient(circle at 85% 15%,#ffe1ed,transparent 30%),
+    linear-gradient(135deg,#fff,#fff8f5);
+}
+.hero-grid,.about-grid,.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+.eyebrow,.kicker { color:var(--pink); font-weight:800; }
+.hero h1 {
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  line-height:1.05;
+  margin:14px 0;
+}
+.hero h1 em { color:var(--pink); font-style:normal; }
+p { color:var(--muted); }
+.hero-logo {
+  background:white;
+  border:1px solid var(--line);
+  padding:25px;
+  border-radius:25px;
+  text-align:center;
+  font-size:5rem;
+  box-shadow:0 15px 40px #13233d12;
+}
+.section { padding:65px 0; }
+.soft { background:var(--cream); }
+.section-head {
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 30px;
+}
+.section h2 {
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  line-height:1.15;
+}
+.about-art {
+  border-radius:24px;
+  background:linear-gradient(130deg,#ffe4ed,#fff0dd);
+  padding:40px;
+  text-align:center;
+  font-size:5rem;
+}
+.values,.cards,.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.value,.card,.gallery-tile,.formbox {
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  background:white;
+}
+.value b { color:var(--pink); font-size:1.4rem; }
+.icon { font-size:2rem; }
+.project-label { color:var(--pink); font-weight:bold; font-size:.85rem; }
+.gallery { grid-template-columns:repeat(4,1fr); }
+.gallery-tile {
+  text-align:center;
+  background:linear-gradient(145deg,#ffe4ed,#fff0dd);
+  font-size:2rem;
+}
+.gallery-tile span {
+  display:block;
+  font-size:.9rem;
+  font-weight:bold;
+}
+.join {
+  background:var(--navy);
+  color:white;
+  padding:32px;
+  border-radius:24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.join p,.contact-info p { color:#e0e6ef; }
+.contact-info {
+  background:var(--navy);
+  color:white;
+  border-radius:20px;
+  padding:28px;
+}
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.field { display:flex; flex-direction:column; gap:5px; }
+.field.full { grid-column:1/-1; }
+.field label { font-weight:bold; font-size:.9rem; }
+.field input,.field textarea,.field select {
+  width:100%;
+  padding:12px;
+  border:1px solid #dce2eb;
+  border-radius:10px;
+}
+.field textarea { min-height:110px; }
+.notice { font-size:.82rem; }
+.footer {
+  background:#0d192d;
+  color:white;
+  padding:35px 0;
+}
+.footer-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:24px;
+}
+.footer p,.footer a { color:#cbd3df; }
+.footer-links { display:grid; gap:8px; }
+.chat-fab {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  border:0;
+  border-radius:50%;
+  width:58px;
+  height:58px;
+  background:#20b968;
+  color:white;
+  font-size:1.5rem;
+  z-index:10;
+  cursor:pointer;
+}
+.chatbox {
+  display:none;
+  position:fixed;
+  z-index:20;
+  right:16px;
+  bottom:88px;
+  width:min(350px,calc(100vw - 32px));
+  background:white;
+  border:1px solid var(--line);
+  box-shadow:0 15px 50px #0002;
+  border-radius:18px;
+  overflow:hidden;
+}
+.chatbox.open { display:block; }
+.chat-head {
+  background:var(--navy);
+  color:white;
+  padding:14px;
+  display:flex;
+  justify-content:space-between;
+}
+.chat-body { padding:16px; }
+.chat-body input,.chat-body textarea {
+  width:100%;
+  padding:10px;
+  margin-bottom:8px;
+  border:1px solid var(--line);
+  border-radius:9px;
+}
+@media(max-width:760px) {
+  .nav { align-items:flex-start; flex-direction:column; }
+  .links { gap:10px; }
+  .hero-grid,.about-grid,.contact-grid { grid-template-columns:1fr; }
+  .cards,.values { grid-template-columns:1fr 1fr; }
+  .gallery { grid-template-columns:1fr 1fr; }
+  .join { display:block; }
+  .footer-grid { grid-template-columns:1fr; }
+  .form-grid { grid-template-columns:1fr; }
+  .field.full { grid-column:auto; }
+}
+@media(max-width:440px) {
+  .cards,.values { grid-template-columns:1fr; }
+  .section { padding:48px 0; }
+}
 </style>
 </head>
+
 <body>
-<div class="topbar"><div class="wrap">💗 Spreading happiness through kindness · Community • Care • Compassion</div></div>
-<header class="header"><div class="wrap nav"><a class="brand" href="#home">TRUST HELPING SMILE <small>SPREADING HAPPINESS</small></a><nav class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Our Work</a><a href="#gallery">Gallery</a><a href="#join">Join Us</a><a href="#contact">Contact</a><button class="btn" id="adminOpen">Admin Login</button></nav></div></header>
+<div class="topbar">
+  <div class="wrap">💗 Spreading happiness through kindness · Community • Care • Compassion</div>
+</div>
+
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      TRUST HELPING SMILE
+      <small>SPREADING HAPPINESS</small>
+    </a>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Our Work</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#join">Join Us</a>
+      <a href="#contact">Contact</a>
+
+      <!-- FIXED: Admin Login now opens the admin route -->
+      <a class="btn" href="/admin/">Admin Login</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-grid"><div><div class="eyebrow">♡ A little kindness goes a long way</div><h1 id="heroTitle">Spreading Happiness,<br><em>Creating Smiles.</em></h1><p id="heroText">Trust Helping Smile believes every act of kindness matters. We support people in need, care for elders, encourage education, and build a compassionate community.</p><p><a class="btn" href="#projects">Explore Our Work →</a> <a class="btn secondary" href="#join">Join Our Mission</a></p></div><div class="hero-logo" aria-label="Trust logo placeholder">💗<br><span style="font-size:1.1rem">TRUST HELPING SMILE</span></div></div></section>
-<section class="section" id="about"><div class="wrap about-grid"><div class="about-art">💞<br><span style="font-size:1rem">Kindness brings us together</span></div><div><div class="kicker">Who we are</div><h2 id="aboutTitle">A heart for people. A hope for a better world.</h2><p id="aboutText">Trust Helping Smile is committed to spreading happiness through meaningful social activities, compassion, and community support. We aim to stand beside people who need help and create moments of dignity, care, and joy.</p><div class="values"><div class="value"><b>♡</b><br>Compassion</div><div class="value"><b>✦</b><br>Dignity</div><div class="value"><b>◎</b><br>Community</div></div></div></div></section>
-<section class="section soft" id="projects"><div class="wrap"><div class="section-head"><div class="kicker">What we do</div><h2>Our Work, Our Purpose</h2><p>Our activities aim to make a positive difference in the community.</p></div><div class="cards" id="projectCards"></div><p class="notice" style="text-align:center">Project locations: Surdaas Blind School, Agra; Keetham; Old Age Home, Goverdhan; and Old Age Home, Bharatpur.</p></div></section>
-<section class="section" id="gallery"><div class="wrap"><div class="section-head"><div class="kicker">Moments that matter</div><h2>Our Work, Their Smiles</h2><p>Add genuine photos and updates from your trust activities using Admin Login.</p></div><div class="gallery" id="galleryGrid"></div></div></section>
-<section class="section soft" id="join"><div class="wrap"><div class="join"><div><div class="kicker" style="color:#ffb4d3">Be part of the change</div><h2 id="joinTitle">Be the Reason Someone Smiles Today.</h2><p id="joinText">Volunteer, share an idea, collaborate, or participate in our social activities. We would love to hear from you.</p></div><a class="btn" href="#contact">Join Our Mission →</a></div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="section-head"><div class="kicker">Let's connect</div><h2>We'd Love to Hear From You</h2><p>Send a question, share feedback, or ask how you can get involved.</p></div><div class="contact-grid"><div class="contact-info"><h3>Trust Helping Smile</h3><p>Spreading Happiness, Sharing Hope, Creating Smiles.</p><p>📍 <b>Address</b><br><span id="contactAddress">Add your verified address in Admin Login</span></p><p>📞 <b>Phone / WhatsApp</b><br><span id="contactPhone">Add your phone number in Admin Login</span></p><p>✉️ <b>Email</b><br><span id="contactEmail">Add your email in Admin Login</span></p></div><div class="formbox"><form id="contactForm"><div class="form-grid"><div class="field"><label>Name *</label><input name="name" required maxlength="100"></div><div class="field"><label>Phone</label><input name="phone" maxlength="30"></div><div class="field"><label>Email</label><input name="email" type="email" maxlength="150"></div><div class="field"><label>Subject</label><select name="subject"><option>General enquiry</option><option>Volunteering</option><option>Project information</option><option>Partnership</option><option>Feedback</option><option>Other</option></select></div><div class="field full"><label>Message *</label><textarea name="message" required maxlength="2000"></textarea></div><div class="field full"><button class="btn" type="submit">Send Enquiry →</button><p class="notice">Important: this starter file saves enquiries only in this browser. It does not yet deliver them to the admin from other devices.</p></div></div></form></div></div></div></section>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">♡ A little kindness goes a long way</div>
+      <h1 id="heroTitle">Spreading Happiness,<br><em>Creating Smiles.</em></h1>
+      <p id="heroText">
+        Trust Helping Smile believes every act of kindness matters.
+        We support people in need, care for elders, encourage education,
+        and build a compassionate community.
+      </p>
+      <p>
+        <a class="btn" href="#projects">Explore Our Work →</a>
+        <a class="btn secondary" href="#join">Join Our Mission</a>
+      </p>
+    </div>
+    <div class="hero-logo">
+      💗<br>
+      <span style="font-size:1.1rem">TRUST HELPING SMILE</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-art">
+      💞<br>
+      <span style="font-size:1rem">Kindness brings us together</span>
+    </div>
+    <div>
+      <div class="kicker">Who we are</div>
+      <h2 id="aboutTitle">A heart for people. A hope for a better world.</h2>
+      <p id="aboutText">
+        Trust Helping Smile is committed to spreading happiness through
+        meaningful social activities, compassion, and community support.
+        We aim to stand beside people who need help and create moments
+        of dignity, care, and joy.
+      </p>
+      <div class="values">
+        <div class="value"><b>♡</b><br>Compassion</div>
+        <div class="value"><b>✦</b><br>Dignity</div>
+        <div class="value"><b>◎</b><br>Community</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">What we do</div>
+      <h2>Our Work, Our Purpose</h2>
+      <p>Our activities aim to make a positive difference in the community.</p>
+    </div>
+    <div class="cards" id="projectCards">
+      <article class="card">
+        <div class="icon">📚</div>
+        <h3>Education Support</h3>
+        <p>Supporting learning, inclusion, and opportunities for students.</p>
+        <span class="project-label">Education & Inclusion</span>
+      </article>
+      <article class="card">
+        <div class="icon">👵</div>
+        <h3>Elderly Care</h3>
+        <p>Sharing time, care, respect, and companionship with elderly people.</p>
+        <span class="project-label">Care & Companionship</span>
+      </article>
+      <article class="card">
+        <div class="icon">🍲</div>
+        <h3>Essential Support</h3>
+        <p>Community activities focused on food, clothing, and daily needs.</p>
+        <span class="project-label">Community Welfare</span>
+      </article>
+      <article class="card">
+        <div class="icon">🌸</div>
+        <h3>Women's Hygiene Awareness</h3>
+        <p>Promoting menstrual hygiene awareness, dignity, and support.</p>
+        <span class="project-label">Health & Awareness</span>
+      </article>
+      <article class="card">
+        <div class="icon">🎉</div>
+        <h3>Festival & Happiness Campaigns</h3>
+        <p>Creating joyful moments and celebrating festivals together.</p>
+        <span class="project-label">Joy & Togetherness</span>
+      </article>
+      <article class="card">
+        <div class="icon">🤲</div>
+        <h3>Community Welfare</h3>
+        <p>Connecting people with ways to help and participate in social service.</p>
+        <span class="project-label">People Helping People</span>
+      </article>
+    </div>
+    <p class="notice" style="text-align:center">
+      Project locations: Surdaas Blind School, Agra; Keetham;
+      Old Age Home, Goverdhan; and Old Age Home, Bharatpur.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Moments that matter</div>
+      <h2>Our Work, Their Smiles</h2>
+      <p>Sharing moments from our trust activities and community work.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-tile">📷<span>Social Activities</span></div>
+      <div class="gallery-tile">💝<span>Acts of Kindness</span></div>
+      <div class="gallery-tile">🌱<span>Community Projects</span></div>
+      <div class="gallery-tile">😊<span>Smiles & Memories</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="join">
+  <div class="wrap">
+    <div class="join">
+      <div>
+        <div class="kicker" style="color:#ffb4d3">Be part of the change</div>
+        <h2 id="joinTitle">Be the Reason Someone Smiles Today.</h2>
+        <p id="joinText">
+          Volunteer, share an idea, collaborate, or participate in our
+          social activities. We would love to hear from you.
+        </p>
+      </div>
+      <a class="btn" href="#contact">Join Our Mission →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Let's connect</div>
+      <h2>We'd Love to Hear From You</h2>
+      <p>Send a question, share feedback, or ask how you can get involved.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Trust Helping Smile</h3>
+        <p>Spreading Happiness, Sharing Hope, Creating Smiles.</p>
+        <p>📍 <b>Address</b><br>
+          <span id="contactAddress">Add your verified address</span>
+        </p>
+        <p>📞 <b>Phone / WhatsApp</b><br>
+          <span id="contactPhone">Add your phone number</span>
+        </p>
+        <p>✉️ <b>Email</b><br>
+          <span id="contactEmail">Add your email address</span>
+        </p>
+      </div>
+
+      <div class="formbox">
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="contactName">Name *</label>
+              <input id="contactName" name="name" required maxlength="100">
+            </div>
+            <div class="field">
+              <label for="contactPhoneInput">Phone</label>
+              <input id="contactPhoneInput" name="phone" maxlength="30">
+            </div>
+            <div class="field">
+              <label for="contactEmailInput">Email</label>
+              <input id="contactEmailInput" name="email" type="email" maxlength="150">
+            </div>
+            <div class="field">
+              <label for="contactSubject">Subject</label>
+              <select id="contactSubject" name="subject">
+                <option>General enquiry</option>
+                <option>Volunteering</option>
+                <option>Project information</option>
+                <option>Partnership</option>
+                <option>Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" required maxlength="2000"></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn" type="submit">Send Enquiry →</button>
+              <p class="notice" id="formNotice">
+                This form needs an online form service or backend to deliver messages.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="footer"><div class="wrap footer-grid"><div><b>TRUST HELPING SMILE</b><p>Spreading happiness, sharing hope, and creating smiles through kindness and social service.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="#about">About Us</a><a href="#projects">Our Work</a><a href="#gallery">Gallery</a></div></div><div><h3>Connect</h3><div class="footer-links"><a href="#contact">Contact Us</a><a href="#" id="openChatFooter">Website Chat</a><button class="small-btn" id="adminOpen2">Admin Login</button></div></div></div><p class="wrap">© <span id="year"></span> Trust Helping Smile. All rights reserved.</p></footer>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <b>TRUST HELPING SMILE</b>
+      <p>Spreading happiness, sharing hope, and creating smiles through kindness and social service.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <div class="footer-links">
+        <a href="#about">About Us</a>
+        <a href="#projects">Our Work</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+    </div>
+    <div>
+      <h3>Connect</h3>
+      <div class="footer-links">
+        <a href="#contact">Contact Us</a>
+        <a href="#" id="openChatFooter">Website Chat</a>
+        <a class="btn" href="/admin/">Admin Login</a>
+      </div>
+    </div>
+  </div>
+  <p class="wrap">© <span id="year"></span> Trust Helping Smile. All rights reserved.</p>
+</footer>
+
 <button class="chat-fab" id="chatFab" aria-label="Open chat">💬</button>
-<div class="chatbox" id="chatbox"><div class="chat-head"><b>Chat with Trust Helping Smile</b><button id="chatClose" style="background:none;border:0;color:white">✕</button></div><div class="chat-body"><p>Send us your question or idea.</p><form id="chatForm"><input name="name" required maxlength="100" placeholder="Your name"><input name="contact" maxlength="150" placeholder="Phone or email"><textarea name="message" required maxlength="2000" placeholder="How can we help?"></textarea><button class="btn" style="width:100%">Send Message</button></form></div></div>
-<div class="admin-modal" id="adminModal"><div class="admin-panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div><div class="kicker">Website administration</div><h2>Admin Panel</h2></div><button class="small-btn" id="adminClose">Close ✕</button></div>
-<div id="adminLogin"><p>This starter admin panel is local to this browser, not secure for a live website. For now, use the demo password below.</p><label>Demo password</label><input id="adminPass" type="password" placeholder="Enter demo password"><button class="btn" id="adminLoginBtn" type="button">Log in</button><p class="notice">Demo password: <b>smile-demo</b></p></div>
-<div id="adminContent" class="hidden">
-<h3>Edit Home & About</h3><label>Home heading (use plain text)</label><input id="editHeroTitle"><label>Home description</label><textarea id="editHeroText"></textarea><label>About heading</label><input id="editAboutTitle"><label>About description</label><textarea id="editAboutText"></textarea><label>Join section heading</label><input id="editJoinTitle"><label>Join section text</label><textarea id="editJoinText"></textarea>
-<h3>Contact details</h3><label>Address</label><input id="editAddress"><label>Phone / WhatsApp</label><input id="editPhone"><label>Email</label><input id="editEmail">
-<h3>Manage projects</h3><p class="notice">One project per line, format: icon | title | description | category</p><textarea id="editProjects"></textarea>
-<h3>Manage gallery tiles</h3><p class="notice">One tile per line, format: emoji | caption. This version uses captions, not image uploads.</p><textarea id="editGallery"></textarea>
-<button class="btn" id="saveSiteBtn" type="button">Save Website Changes</button> <button class="small-btn" id="resetSiteBtn" type="button">Reset to Defaults</button>
-<h3>Enquiry Inbox (this browser only)</h3><div style="overflow-x:auto"><table><thead><tr><th>Date</th><th>Name</th><th>Contact</th><th>Type / Subject</th><th>Message</th><th>Action</th></tr></thead><tbody id="inboxRows"></tbody></table></div><p><button class="small-btn" id="exportBtn" type="button">Export CSV</button> <button class="small-btn" id="clearBtn" type="button">Clear all messages</button> <button class="small-btn" id="logoutBtn" type="button">Log out</button></p>
-</div></div></div><div class="toast" id="toast" role="status"></div>
+
+<div class="chatbox" id="chatbox">
+  <div class="chat-head">
+    <b>Chat with Trust Helping Smile</b>
+    <button id="chatClose" type="button"
+      style="background:none;border:0;color:white">✕</button>
+  </div>
+  <div class="chat-body">
+    <p>Send us your question or idea.</p>
+    <form id="chatForm">
+      <input name="name" required maxlength="100" placeholder="Your name">
+      <input name="contact" maxlength="150" placeholder="Phone or email">
+      <textarea name="message" required maxlength="2000" placeholder="How can we help?"></textarea>
+      <button class="btn" type="submit" style="width:100%">Send Message</button>
+    </form>
+    <p class="notice">Online delivery requires a connected backend.</p>
+  </div>
+</div>
+
 <script>
-const $=s=>document.querySelector(s);
-const defaults={
- heroTitle:'Spreading Happiness, Creating Smiles.',heroText:'Trust Helping Smile believes every act of kindness matters. We support people in need, care for elders, encourage education, and build a compassionate community.',
- aboutTitle:'A heart for people. A hope for a better world.',aboutText:'Trust Helping Smile is committed to spreading happiness through meaningful social activities, compassion, and community support. We aim to stand beside people who need help and create moments of dignity, care, and joy.',
- joinTitle:'Be the Reason Someone Smiles Today.',joinText:'Volunteer, share an idea, collaborate, or participate in our social activities. We would love to hear from you.',
- address:'Add your verified address in Admin Login',phone:'Add your phone number in Admin Login',email:'Add your email in Admin Login',
- projects:[['📚','Education Support','Supporting learning, inclusion, and opportunities for students, including visually impaired learners.','Education & Inclusion'],['👵','Elderly Care','Sharing time, care, respect, and companionship with elderly people.','Care & Companionship'],['🍲','Essential Support','Community activities focused on food, clothing, and essential everyday needs.','Community Welfare'],['🌸',"Women's Hygiene Awareness",'Promoting awareness, dignity, and access to menstrual hygiene information and essentials.','Health & Awareness'],['🎉','Festival & Happiness Campaigns','Creating joyful moments and celebrating festivals with people and communities.','Joy & Togetherness'],['🤲','Community Welfare','Connecting people with opportunities to help, volunteer, and participate in social service.','People Helping People']],
- gallery:[['📷','Social Activities'],['💝','Acts of Kindness'],['🌱','Community Projects'],['😊','Smiles & Memories']]
-};
-let siteData=loadSite();
-function loadSite(){try{return {...defaults,...JSON.parse(localStorage.getItem('ths_site_content')||'{}')}}catch(e){return {...defaults}}}
-function saveSite(){localStorage.setItem('ths_site_content',JSON.stringify(siteData))}
-function toast(t){const x=$('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2800)}
-function renderSite(){
- $('#heroTitle').textContent=siteData.heroTitle;$('#heroText').textContent=siteData.heroText;$('#aboutTitle').textContent=siteData.aboutTitle;$('#aboutText').textContent=siteData.aboutText;$('#joinTitle').textContent=siteData.joinTitle;$('#joinText').textContent=siteData.joinText;
- $('#contactAddress').textContent=siteData.address;$('#contactPhone').textContent=siteData.phone;$('#contactEmail').textContent=siteData.email;
- $('#projectCards').innerHTML=siteData.projects.map(p=>`<article class="card"><div class="icon">${esc(p[0])}</div><h3>${esc(p[1])}</h3><p>${esc(p[2])}</p><span class="project-label">${esc(p[3])}</span></article>`).join('');
- $('#galleryGrid').innerHTML=siteData.gallery.map(g=>`<div class="gallery-tile">${esc(g[0])}<span>${esc(g[1])}</span></div>`).join('');
-}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function getMessages(){try{return JSON.parse(localStorage.getItem('ths_enquiries')||'[]')}catch(e){return []}}
-function saveMessage(d){const a=getMessages();a.unshift({...d,id:Date.now(),date:new Date().toLocaleString()});localStorage.setItem('ths_enquiries',JSON.stringify(a))}
-function renderInbox(){const data=getMessages();$('#inboxRows').innerHTML=data.length?data.map(m=>`<tr><td>${esc(m.date)}</td><td>${esc(m.name)}</td><td>${esc(m.contact||'')}</td><td>${esc(m.type)}<br>${esc(m.subject||'')}</td><td>${esc(m.message)}</td><td><button class="small-btn" data-del="${m.id}">Delete</button></td></tr>`).join(''):'<tr><td colspan="6">No messages saved in this browser yet.</td></tr>';$('#inboxRows').querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{localStorage.setItem('ths_enquiries',JSON.stringify(getMessages().filter(m=>m.id!==Number(b.dataset.del))));renderInbox()})}
-function openAdmin(){$('#adminModal').classList.add('open');$('#adminLogin').classList.remove('hidden');$('#adminContent').classList.add('hidden');$('#adminPass').value=''}
-$('#adminOpen').onclick=openAdmin;$('#adminOpen2').onclick=openAdmin;$('#adminClose').onclick=()=>$('#adminModal').classList.remove('open');
-$('#adminLoginBtn').onclick=()=>{if($('#adminPass').value==='smile-demo'){$('#adminLogin').classList.add('hidden');$('#adminContent').classList.remove('hidden');fillEditor();renderInbox()}else toast('Incorrect demo password.')};
-function fillEditor(){$('#editHeroTitle').value=siteData.heroTitle;$('#editHeroText').value=siteData.heroText;$('#editAboutTitle').value=siteData.aboutTitle;$('#editAboutText').value=siteData.aboutText;$('#editJoinTitle').value=siteData.joinTitle;$('#editJoinText').value=siteData.joinText;$('#editAddress').value=siteData.address;$('#editPhone').value=siteData.phone;$('#editEmail').value=siteData.email;$('#editProjects').value=siteData.projects.map(p=>p.join(' | ')).join('\n');$('#editGallery').value=siteData.gallery.map(g=>g.join(' | ')).join('\n')}
-$('#saveSiteBtn').onclick=()=>{const lines=s=>s.split('\n').map(x=>x.split('|').map(y=>y.trim())).filter(x=>x.some(Boolean));siteData={heroTitle:$('#editHeroTitle').value.trim()||defaults.heroTitle,heroText:$('#editHeroText').value.trim(),aboutTitle:$('#editAboutTitle').value.trim(),aboutText:$('#editAboutText').value.trim(),joinTitle:$('#editJoinTitle').value.trim(),joinText:$('#editJoinText').value.trim(),address:$('#editAddress').value.trim(),phone:$('#editPhone').value.trim(),email:$('#editEmail').value.trim(),projects:lines($('#editProjects').value).map(p=>[p[0]||'♡',p[1]||'Project',p[2]||'',p[3]||'Community']).slice(0,30),gallery:lines($('#editGallery').value).map(g=>[g[0]||'📷',g[1]||'Activity']).slice(0,20)};saveSite();renderSite();toast('Changes saved in this browser onl
-/* 
+"use strict";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const chatbox = document.getElementById("chatbox");
+
+document.getElementById("chatFab").addEventListener("click", function () {
+  chatbox.classList.toggle("open");
+});
+
+document.getElementById("chatClose").addEventListener("click", function () {
+  chatbox.classList.remove("open");
+});
+
+document.getElementById("openChatFooter").addEventListener("click", function (event) {
+  event.preventDefault();
+  chatbox.classList.add("open");
+});
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  alert("Your form is ready, but online message delivery has not been connected yet. Please contact the trust directly.");
+});
+
+document.getElementById("chatForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  alert("Online chat delivery has not been connected yet. Please use the Contact section to reach the trust.");
+});
+</script>
+</body>
+</html>
